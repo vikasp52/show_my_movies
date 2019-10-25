@@ -4,11 +4,11 @@ import 'package:show_my_movies/model/movie_model.dart';
 import 'package:show_my_movies/util/const.dart';
 import 'package:show_my_movies/widgets/movie_name_widget.dart';
 
-class MemberDetailsPage extends StatelessWidget {
+class MovieDetailsScreen extends StatelessWidget {
   final MovieModel movieModel;
   final PaletteGenerator palette;
 
-  MemberDetailsPage({this.movieModel, this.palette});
+  MovieDetailsScreen({this.movieModel, this.palette});
 
   @override
   Widget build(BuildContext context) {

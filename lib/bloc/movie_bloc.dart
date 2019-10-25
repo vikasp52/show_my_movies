@@ -5,7 +5,7 @@ import 'dart:convert' as convert;
 import 'package:show_my_movies/model/movie_model.dart';
 
 class MovieBloc {
-  static const key = 'YOUR API KEY';
+  static const key = 'f95e150147279056fcf6713b780061ba';
 
   String baseURL = 'https://api.themoviedb.org/3/discover/movie?api_key=$key&page=';
 
@@ -19,6 +19,7 @@ class MovieBloc {
   final BehaviorSubject<List<MovieModel>> _topMovieListController = BehaviorSubject();
   Stream<List<MovieModel>> get topMovieListStream => _topMovieListController.stream;
 
+  //Method the get the Movie data
   Future getMovies({String pageNo = '1'}) async {
     var response = await http.get('$baseURL$pageNo');
     if (response.statusCode == 200) {

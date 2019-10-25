@@ -70,7 +70,7 @@ class _MoviesState extends State<Movies> {
                 onTap: () {
                   _generatePalette(context, 'https://image.tmdb.org/t/p/w500${widget.movies[index].backdrop_path}').then((_palette) {
 
-                    Navigator.push(context, ScaleRoute(page: MemberDetailsPage(movieModel: widget.movies[index], palette: _palette)));
+                    Navigator.push(context, ScaleRoute(page: MovieDetailsScreen(movieModel: widget.movies[index], palette: _palette)));
                   });
                 },
               );
